@@ -2,19 +2,18 @@
   Layout = "_Layout";
 }
 
-@using BestRestaurants.Models
-@model BestRestaurants.Models.Cuisine
+@using HairSalon.Models
+@model HairSalon.Models.Stylist
 
-<h2>Type of food details</h2>
-<hr />
-<h3>@Html.DisplayNameFor(model => model.CuisineName): @Html.DisplayFor(model => model.CuisineName)</h3>
-<p>@Html.ActionLink("Edit type of food", "Edit", new { id = Model.CuisineId })</p>
-<p>@Html.ActionLink("Delete type of food", "Delete", new { id = Model.CuisineId })</p>
-<p>@Html.ActionLink("Back to type of food list", "Index")</p>
+<h2>Stylist details</h2>
+<h3>@Html.DisplayNameFor(model => model.StylistName): @Html.DisplayFor(model => model.StylistName)</h3>
+<p>@Html.ActionLink("Edit stylist", "Edit", new { id = Model.StylistId })</p>
+<p>@Html.ActionLink("Delete stylist", "Delete", new { id = Model.StylistId })</p>
+<p>@Html.ActionLink("Back to stylists' list", "Index")</p>
 
 <ul>
-  @foreach(Restaurant restaurant in Model.Restaurants)
+  @foreach(Client client in Model.Clients)
 {
-  <li>@Html.ActionLink($"{restaurant.Name}", "Show", "Restaurants", new {id = restaurant.RestaurantId})</li>
+  <li>@Html.ActionLink($"{client.Name}", "Show", "Clients", new {id = client.ClientId})</li>
 }
 </ul>
