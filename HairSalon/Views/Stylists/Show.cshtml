@@ -13,7 +13,10 @@
 <p>@Html.ActionLink("Edit stylist", "Edit", new { id = Model.StylistId })</p>
 <p>@Html.ActionLink("Delete stylist", "Delete", new { id = Model.StylistId })</p>
 <p>@Html.ActionLink("Back to stylists' list", "Index")</p>
+<p>@Html.ActionLink("Home", "Index", "Home")</p>
+<br>
 
+<h4>Their Clients</h4>
 <ul>
   @foreach(Client client in Model.Clients)
 {
