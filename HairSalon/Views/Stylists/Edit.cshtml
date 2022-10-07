@@ -2,18 +2,18 @@
   Layout = "_Layout";
 }
 
-@model BestRestaurants.Models.Cuisine
+@model HairSalon.Models.Stylist
 
 <h2>Edit</h2>
 
-<h4>Edit this type of food: @Html.DisplayFor(model => model.CuisineName)</h4>
+<h4>Edit this stylist:  @Html.DisplayFor(model => model.StylistName)</h4>
 
 @using (Html.BeginForm())
 {
-  @Html.HiddenFor(model => model.CuisineId)
+  @Html.HiddenFor(model => model.StylistId)
 
-  @Html.LabelFor(model => model.CuisineName)
-  @Html.EditorFor(model => model.CuisineName)
+  @Html.LabelFor(model => model.StylistName)
+  @Html.EditorFor(model => model.StylistName)
 
   <input type="submit" value="Save" />
 }

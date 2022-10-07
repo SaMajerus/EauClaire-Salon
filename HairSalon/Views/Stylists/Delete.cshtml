@@ -2,11 +2,11 @@
   Layout = "_Layout";
 }
 
-@model BestRestaurants.Models.Cuisine
+@model HairSalon.Models.Stylist
 
-<h2>Are you sure you want to delete this type of food?</h2>
+<h2>Are you sure you want to remove this Stylist?</h2>
 
-@Html.DisplayNameFor(model => model.CuisineName): @Html.DisplayFor(model => model.CuisineName)
+@Html.DisplayNameFor(model => model.StylistName): @Html.DisplayFor(model => model.StylistName)
 @using (Html.BeginForm())
 {
   <input type="submit" value="Delete" />
