@@ -1,0 +1,20 @@
+@{
+  Layout = "_Layout";
+}
+
+@using BestRestaurants.Models
+@model BestRestaurants.Models.Cuisine
+
+<h2>Type of food details</h2>
+<hr />
+<h3>@Html.DisplayNameFor(model => model.CuisineName): @Html.DisplayFor(model => model.CuisineName)</h3>
+<p>@Html.ActionLink("Edit type of food", "Edit", new { id = Model.CuisineId })</p>
+<p>@Html.ActionLink("Delete type of food", "Delete", new { id = Model.CuisineId })</p>
+<p>@Html.ActionLink("Back to type of food list", "Index")</p>
+
+<ul>
+  @foreach(Restaurant restaurant in Model.Restaurants)
+{
+  <li>@Html.ActionLink($"{restaurant.Name}", "Show", "Restaurants", new {id = restaurant.RestaurantId})</li>
+}
+</ul>
