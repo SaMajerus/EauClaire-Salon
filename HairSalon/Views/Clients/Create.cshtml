@@ -2,29 +2,23 @@
   Layout = "_Layout";
 }
 
-@model BestRestaurants.Models.Restaurant
-<h4>Add a new restaurant</h4>
+@model HairSalon.Models.Client
+<h4>Add a new client</h4>
 
 @using (Html.BeginForm())
 {
-  @Html.LabelFor(model => model.Cuisine)
-  @Html.DropDownList("CuisineId")
-  <br>
-  @Html.LabelFor(model => model.Name)
+  @Html.LabelFor(model => model.Stylist)
+  @Html.DropDownList("StylistId")
+  <br> 
+
+  @Html.LabelFor(model => model.Name)  //Client's name
   @Html.TextBoxFor(model => model.Name)
   <br>
-  @Html.LabelFor(model => model.Rating)
-  @Html.TextBoxFor(model => model.Rating, new { type = "number", min = "0", max = "5" })
-  <br> 
-  @Html.LabelFor(model => model.Cost)
-  @Html.TextBoxFor(model => model.Cost, new { type = "number", min = "0", max = "3" })
-  <br><br>
-  <!--Review-->
-  @Html.LabelFor(model => model.Review) <span>(max 255 characters):</span><br>
-  @Html.TextAreaFor(model => model.Review, new { cols = "60", rows = "5", maxlength = "255"})
+  @Html.LabelFor(model => model.About) 
+  @Html.TextBoxFor(model => model.About)
   <br>
-  <input type="submit" value="Add New Restaurant" class="btn btn-default" />
+  <input type="submit" value="Add New Client" class="btn btn-default" />
 }
 <p>
-  @Html.ActionLink("Show all restaurants", "Index")
-</p> 
+  @Html.ActionLink("Show all clients", "Index")
+</p>
