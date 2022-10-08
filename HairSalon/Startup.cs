@@ -38,8 +38,6 @@ namespace HairSalon
       {
         routes.MapControllerRoute("default", "{controller=Home}/{action=Index}/{id?}");
       });
-
-      //app.UseStaticFiles();   //Used for Styling, media, etc
       
       app.Run(async (context) =>
       {

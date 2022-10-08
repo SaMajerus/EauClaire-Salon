@@ -14,11 +14,14 @@
   @Html.LabelFor(model => model.Name)  //Client's name
   @Html.TextBoxFor(model => model.Name)
   <br>
+
   @Html.LabelFor(model => model.About) 
   @Html.TextBoxFor(model => model.About)
   <br>
+  
   <input type="submit" value="Add New Client" class="btn btn-default" />
 }
+
 <p>
   @Html.ActionLink("Show all clients", "Index")
 </p>

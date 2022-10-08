@@ -3,7 +3,6 @@
 }
 
 @model HairSalon.Models.Stylist
-
 <h2>Are you sure you want to remove this Stylist?</h2>
 
 @Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)
@@ -11,4 +10,5 @@
 {
   <input type="submit" value="Delete" />
 }
+
 @Html.ActionLink("Back to List", "Index")
