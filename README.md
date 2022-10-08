@@ -92,7 +92,7 @@ Replace 'YOUR-SQL-USERNAME' and 'YOUR-SQL-PASSWORD' with your username and passw
 
 
 ## Known Bugs
-* N/A 
+* When a client is deleted from the list of Clients, their old ClientId integer is not freed up for use by a new client. (It doesn't affect the performance of the program, but may create ghostly-duplicate entries for the Clients Table in the SQL database file.) 
 <br>
 
 
